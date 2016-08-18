@@ -1,0 +1,22 @@
+<div class="">
+    <h3 class="bordered"
+            ng-class="{'text-red' : !drinkCtrl.isInStock(drink)}"
+            style="padding: 4px;">
+        <span class="text-bold">{{drink.name}}</span>
+        <!-- Todo: Hide or resize the this text when it does not fit on one line with the drink name. -->
+        <span class="pull-right">
+            <span ng-show="drinkCtrl.isInStock(drink)">In</span>
+            <span ng-show="!(drinkCtrl.isInStock(drink))">Out of</span>
+            Stock
+            <span class="text-bold">{{drinkCtrl.cost(drink) | currency}}</span>
+        </span>
+    </h3>
+    <div class="fluid">
+        <drink-gallery class="col-xs-12 col-sm-7"></drink-gallery>
+        <h3>Ingredients</h3>
+        <ingredients class="col-xs-12 col-sm-5"
+                ng-repeat="(key, value) in drink.ingredients"></ingredients>
+    </div>
+</div>
+
+

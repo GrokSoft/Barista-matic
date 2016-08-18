@@ -1,0 +1,28 @@
+<div style="background-color: #b9b9b9">
+    <h2 class="text-center"
+            ng-show="$index==0">Ingredients in Stock </h2>
+    <h3 class="col-xs-6 col-sm-6"
+            ng-show="$index==0">Ingredient</h3>
+    <h3 class="col-xs-3 col-sm-3"
+            ng-show="$index==0">Cost</h3>
+    <h3 class="col-xs-3 col-sm-3"
+            ng-show="$index==0">Stock</h3>
+    
+    <div class="col-xs-6 col-sm-6">{{ingredient.name}}</div>
+    <div class="col-xs-3 col-sm-3">{{ingredient.cost | currency}}</div>
+    <div class="col-xs-3 col-sm-3">{{ingredient.quantity}}</div>
+    
+    <div class="text-center "
+            ng-show="$index==8">
+        <br>
+        <br>
+        <span>Press this button to restock all ingredients
+            <span class="text-nowrap">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+                <button ng-click="ingredientsCtrl.restock()">Restock</button>
+            </span>
+        </span>
+        <br>
+        <br>
+    </div>
+</div>
