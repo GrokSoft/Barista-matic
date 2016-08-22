@@ -7,7 +7,7 @@ var INGREDENTMAX = 10;
 /**
  * The ingredients for all drinks
  */
-var ingredients = {
+var ingredients  = {
     coffee      : {
         name    : "Coffee",
         cost    : .75,
@@ -133,7 +133,7 @@ var drinks = {
         var barista = this;
 
         // Just using local data for now
-        this.drinks = drinks;
+        this.drinks      = drinks;
         this.ingredients = ingredients;
 
         /**
@@ -235,9 +235,9 @@ var drinks = {
         // Set up the Carousel's listeners. But only do this the first time.
         if (Carousel.first === undefined || Carousel.first === true) {
             // Create the Static vars that is NOT inherited by instantiated classes and needed to keep track of timing.
-            Carousel.first = false;
+            Carousel.first    = false;
             Carousel.carDelay = 0;  // The delay between each carousel sliding.
-            Carousel.running = true;
+            Carousel.running  = true;
 
             // Make the carousel pause when hovered over.
             $(document).on('mouseleave', '.carousel', function () {

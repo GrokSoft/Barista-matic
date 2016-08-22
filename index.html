@@ -1,31 +1,23 @@
 <!DOCTYPE html>
-<html ng-app="barista"
-        lang="en">
+<html ng-app="barista" lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <meta http-equiv="X-UA-Compatible"
-            content="IE=edge">
-    <meta name="viewport"
-            content="width=device-width, initial-scale=1">
-    <meta name="description"
-            content="Barista-Matic">
-    <meta name="keywords"
-            content="coffee, barista ">
-    <meta name="author"
-            content="Bill Gray">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Barista-Matic">
+    <meta name="keywords" content="coffee, barista ">
+    <meta name="author" content="Bill Gray">
     <title>Barista-matic</title>
-    
-    <link href="css/bootstrap.css"
-            rel="stylesheet">
-    <link href="css/barista.css"
-            rel="stylesheet">
-    
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/barista.css" rel="stylesheet">
+
     <script src="js/angular/angular.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/picturePolyfill.min.js"></script>
-    
+
     <!-- Todo: Change to .min files for production -->
     <script src="js/app.js"></script>
     <script src="js/drinks.js"></script>
@@ -38,10 +30,11 @@
     <header>
         <barista-jumbo></barista-jumbo>
         <h1 class="text-center">Welcome to Barista-matic</h1>
-        <h2 class="text-center">Please select the image of the drink you wish to dispense</h2>
+        <h2 class="text-center">Please select the image of the drink you wish to
+            dispense</h2>
         <hr>
     </header>
-    
+
     <!-- Drinks Container -->
     <div class="col-lg-9 col-md-8">
         <drink class="col-lg-4 col-md-6"
@@ -49,9 +42,9 @@
     </div>
     <a name="dispensedGo"></a>
     <div class="col-lg-3 col-md-4">
-        <div id="dispensed"
-                class="text-center">&nbsp;</div>
-        <ingredients-list ng-repeat="ingredient in baristaCtrl.ingredients track by $index"></ingredients-list>
+        <div id="dispensed" class="text-center">&nbsp;</div>
+        <ingredients-list
+                ng-repeat="ingredient in baristaCtrl.ingredients track by $index"></ingredients-list>
     </div>
 
 </div>

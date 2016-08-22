@@ -32,7 +32,7 @@
                     var ret = true;
                     for (var ingredient in selectedDrink.ingredients) {
                         /** Todo: Add check for hasOwnProperty anywhere I use [ingredient] **/
-                        var quantity = selectedDrink.ingredients[ingredient];
+                        var quantity  = selectedDrink.ingredients[ingredient];
                         var available = ingredients[ingredient].quantity;
                         if (available < quantity) {
                             ret = false;
@@ -65,7 +65,7 @@
                 this.order = function (selectedDrink) {
                     var dispensed = true;
                     for (var ingredient in selectedDrink.ingredients) {
-                        var quantity = selectedDrink.ingredients[ingredient];
+                        var quantity  = selectedDrink.ingredients[ingredient];
                         var available = ingredients[ingredient].quantity;
                         if (available >= quantity)
                             ingredients[ingredient].quantity -= quantity;
