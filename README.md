@@ -32,7 +32,7 @@ Cappuccino | 2 units of Espresso, 1 unit of steamed milk, 1 unit of foamed milk
 
 ### Per-unit ingredient costs are as follows:
 
-Ingredient | Unit Cost |
+Ingredient | Unit Cost
 ___ | ___
 Coffee | $0.75
 Decaf Coffee | $0.75
