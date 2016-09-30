@@ -3,6 +3,7 @@
 ## A Coffee make simulator developed with AngularJS and Bootstrap 3
 
 This is a coffee maker simulator I did as a programming exercise. I was given the following spec and about 6 hours to complete it.
+The spec is written for a back-end only. **_I was told to ignore the backend and create a GUI instead. Since the position I was applying for is a front-end position._**
 
 ### PROBLEM DESCRIPTION:
 
@@ -25,8 +26,7 @@ Drink | Ingredients
 Coffee | 3 units of coffee, 1 unit of sugar, 1 unit of cream
 Decaf Coffee | 3 units of Decaf Coffee, 1 unit of sugar, 1 unit of cream
 Caffe Latte | 2 units of espresso, 1 unit of steamed milk
-Caffe
-Americano | 3 units of espresso
+Caffe Americano | 3 units of espresso
 Caffe Mocha | 1 units of Espresso, 1 unit of cocoa, 1 unit of steamed milk, 1 unit of whipped cream
 Cappuccino | 2 units of Espresso, 1 unit of steamed milk, 1 unit of foamed milk
 
@@ -51,9 +51,11 @@ should restore each ingredient to a maximum of 10 units.
 Your solution should read from the standard input stream, one command per line. No prompts or
 other extraneous user messages should be displayed. Blank input lines should be ignored.
 Each valid command consists of a single character, as follows:
+
 'R' or 'r' - restock the inventory and redisplay the menu
 'Q' or 'q' - quit the application
 [1-6] - order the drink with the corresponding number in the menu
+
 If the user enters an invalid command, then the program should display a single-line message with the
 following format:
 Invalid selection: <characters that were entered>
@@ -100,58 +102,86 @@ highlight particular aspects of your design or implementation.
 ### EXAMPLE:
 Upon application startup, the initial inventory list and drink menu would look like this:
 Inventory:
-Cocoa,10
-Coffee,10
-Cream,10
-Decaf Coffee,10
-Espresso,10
-Foamed Milk,10
-Steamed Milk,10
-Sugar,10
-Whipped Cream,10
+
+Ingredient | Quantity
+--- | ---
+Cocoa | 10
+Coffee | 10
+Cream | 10
+Decaf Coffee | 10
+Espresso | 10
+Foamed Milk | 10
+Steamed Milk | 10
+Sugar | 10
+Whipped Cream | S10
+
 Menu:
-1,Caffe Americano,$3.30,true
-2,Caffe Latte,$2.55,true
-3,Caffe Mocha,$3.35,true
-4,Cappuccino,$2.90,true
-5,Coffee,$2.75,true
-6,Decaf Coffee,$2.75,true
+
+No. | Drink | Price | In-Stock
+--- | --- | --- | ---
+1 | Caffe Americano | $3.30 | true
+2 | Caffe Latte | $2.55 | true
+3 | Caffe Mocha | $3.35 | true
+4 | Cappuccino | $2.90 | true
+5 | Coffee | $2.75 | true
+6 | Decaf Coffee| $2.75| true
+
 For input consisting of the following commands:
+
 2
+
 q
+
 the program would produce the following output (including the startup output):
+
 Inventory:
-Cocoa,10
-Coffee,10
-Cream,10
-Decaf Coffee,10
-Espresso,10
-Foamed Milk,10
-Steamed Milk,10
-Sugar,10
-Whipped Cream,10
+
+Ingredient | Quantity
+--- | ---
+Cocoa | 10
+Coffee | 10
+Cream | 10
+Decaf Coffee | 10
+Espresso | 10
+Foamed Milk | 10
+Steamed Milk | 10
+Sugar | 10
+Whipped Cream | 10
+
 Menu:
-1,Caffe Americano,$3.30,true
-2,Caffe Latte,$2.55,true
-3,Caffe Mocha,$3.35,true
-4,Cappuccino,$2.90,true
-5,Coffee,$2.75,true
-6,Decaf Coffee,$2.75,true
+
+No. | Drink | Price | In-Stock
+--- | --- | --- | ---
+1 | Caffe Americano | $3.30 | true
+2 | Caffe Latte | $2.55 | true
+3 | Caffe Mocha | $3.35 | true
+4 | Cappuccino | $2.90 | true
+5 | Coffee | $2.75 | true
+6 | Decaf Coffee | $2.75 | true
+
 Dispensing: Caffe Latte
+
 Inventory:
-Cocoa,10
-Coffee,10
-Cream,10
-Decaf Coffee,10
-Espresso,8
-Foamed Milk,10
-Steamed Milk,9
-Sugar,10
-Whipped Cream,10
+
+Ingredient | Quantity
+--- | ---
+Cocoa | 10
+Coffee | 10
+Cream | 10
+Decaf Coffee | 10
+Espresso | 8
+Foamed Milk | 10
+Steamed Milk | 9
+Sugar | 10
+Whipped Cream | 10
+
 Menu:
-1,Caffe Americano,$3.30,true
-2,Caffe Latte,$2.55,true
-3,Caffe Mocha,$3.35,true
-4,Cappuccino,$2.90,true
-5,Coffee,$2.75,true
-6,Decaf Coffee,$2.75,true
+
+No. | Drink | Price | In-Stock
+--- | --- | --- | ---
+1 | Caffe Americano | $3.30 | true
+2 | Caffe Latte | $2.55 | true
+3 | Caffe Mocha | $3.35 | true
+4 | Cappuccino | $2.90 | true
+5 | Coffee | $2.75 | true
+6 | Decaf Coffee | $2.75 | true
