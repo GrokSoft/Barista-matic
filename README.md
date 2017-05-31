@@ -1,4 +1,4 @@
-#Barista-Matic
+# Barista-Matic
 
 ## A Coffee make simulator developed with AngularJS and Bootstrap 3
 
